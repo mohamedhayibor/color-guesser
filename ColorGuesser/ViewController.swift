@@ -23,36 +23,31 @@ class ViewController: UIViewController {
     
     // setting action for every button (click -> action that gets triggered)
     // check first if
-    @IBAction func firstButtonAction(_ sender: UIButton) {
-        if buttonControllers[0] {
+    
+    func genericButtonAction(buttonPosition: Int) {
+        if buttonControllers[buttonPosition] {
             changeColorButton()
         } else {
             print(">>>>>> try again")
         }
+    }
+    
+    // Every button will check whether it is hitting the right color then execute
+    // lanch the next scene
+    @IBAction func firstButtonAction(_ sender: UIButton) {
+        genericButtonAction(buttonPosition: 0)
     }
     
     @IBAction func secondButtonAction(_ sender: AnyObject) {
-        if buttonControllers[1] {
-            changeColorButton()
-        } else {
-            print(">>>>>> try again")
-        }
+        genericButtonAction(buttonPosition: 1)
     }
     
     @IBAction func thirdButtonAction(_ sender: UIButton) {
-        if buttonControllers[2] {
-            changeColorButton()
-        } else {
-            print(">>>>>> try again")
-        }
+        genericButtonAction(buttonPosition: 2)
     }
     
     @IBAction func fourthActionButton(_ sender: UIButton) {
-        if buttonControllers[3] {
-            changeColorButton()
-        } else {
-            print(">>>>>> try again")
-        }
+        genericButtonAction(buttonPosition: 3)
     }
     
     func getRandomColorFunc() -> [String] {
@@ -89,11 +84,6 @@ class ViewController: UIViewController {
         } else {
             fourthButton.setTitle(nameOfColor, for: .normal)
         }
-        
-        //  print(">>>> buttonWithTrueValue: \(buttonWithTrueValue)")
-        
-        // print(">> optional: \(rightAnwer.titleLabel)")
-        // rightAnwer.setTitle(nameOfColor, for: UIControlState.normal
         
         buttonControllers = [false, false, false, false]
         // at a random index set boolean to true > will be the right answer at next scene
