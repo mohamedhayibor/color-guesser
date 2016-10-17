@@ -12,7 +12,6 @@
 		CD261F071DB0A9D9006FF699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD261F051DB0A9D9006FF699 /* Main.storyboard */; };
 		CD261F091DB0A9D9006FF699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD261F081DB0A9D9006FF699 /* Assets.xcassets */; };
 		CD261F0C1DB0A9D9006FF699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD261F0A1DB0A9D9006FF699 /* LaunchScreen.storyboard */; };
-		CD261F161DB1057A006FF699 /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = CD261F151DB1057A006FF699 /* colors.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		CD261F081DB0A9D9006FF699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD261F0B1DB0A9D9006FF699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD261F0D1DB0A9D9006FF699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD261F151DB1057A006FF699 /* colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +66,6 @@
 			children = (
 				CD261F011DB0A9D9006FF699 /* AppDelegate.swift */,
 				CD261F081DB0A9D9006FF699 /* Assets.xcassets */,
-				CD261F151DB1057A006FF699 /* colors.json */,
 				CD261F0A1DB0A9D9006FF699 /* LaunchScreen.storyboard */,
 				CD261F0D1DB0A9D9006FF699 /* Info.plist */,
 			);
@@ -136,7 +133,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD261F0C1DB0A9D9006FF699 /* LaunchScreen.storyboard in Resources */,
-				CD261F161DB1057A006FF699 /* colors.json in Resources */,
 				CD261F091DB0A9D9006FF699 /* Assets.xcassets in Resources */,
 				CD261F071DB0A9D9006FF699 /* Main.storyboard in Resources */,
 			);
@@ -312,6 +308,7 @@
 				CD261F121DB0A9D9006FF699 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

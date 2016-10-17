@@ -25,6 +25,7 @@
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" button="YES" adjustable="YES"/>
                                         </accessibility>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="31"/>
                                         <state key="normal" title="Black"/>
                                         <connections>
                                             <action selector="firstButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Gk-Vx-esE"/>
@@ -35,6 +36,7 @@
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" button="YES" adjustable="YES"/>
                                         </accessibility>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="31"/>
                                         <state key="normal" title="Orange"/>
                                         <connections>
                                             <action selector="secondButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9U-OQ-TVO"/>
@@ -45,6 +47,7 @@
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" button="YES" adjustable="YES"/>
                                         </accessibility>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="31"/>
                                         <state key="normal" title="White"/>
                                         <connections>
                                             <action selector="thirdButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b2N-eU-hFA"/>
@@ -55,6 +58,7 @@
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" button="YES" adjustable="YES"/>
                                         </accessibility>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="31"/>
                                         <state key="normal" title="Violet"/>
                                         <connections>
                                             <action selector="fourthActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F3Q-zC-ZIE"/>
