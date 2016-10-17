@@ -94,8 +94,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // executes at new load 
-        print("Lifecycle hook not needed yet")
+        firstButton.layer.cornerRadius = 8
+        secondButton.layer.cornerRadius = 8
+        thirdButton.layer.cornerRadius = 8
+        fourthButton.layer.cornerRadius = 8
     }
     
     private func hexStringToUIColor (_ hex:String) -> UIColor {
