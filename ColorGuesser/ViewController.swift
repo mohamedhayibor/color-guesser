@@ -56,37 +56,36 @@ class ViewController: UIViewController {
     }
     
     func randomizeEveryButtonLabel () {
-        firstButton.setTitle(getRandomColorFunc()[1], for: UIControlState.normal)
-        secondButton.setTitle(getRandomColorFunc()[1], for: UIControlState.normal)
-        thirdButton.setTitle(getRandomColorFunc()[1], for: UIControlState.normal)
-        fourthButton.setTitle(getRandomColorFunc()[1], for: UIControlState.normal)
+        firstButton.setTitle(getRandomColorFunc()[1], for: .normal)
+        secondButton.setTitle(getRandomColorFunc()[1], for: .normal)
+        thirdButton.setTitle(getRandomColorFunc()[1], for: .normal)
+        fourthButton.setTitle(getRandomColorFunc()[1], for: .normal)
     }
     
     @IBAction func changeColorButton() {
-        let getRandomColor = getRandomColorFunc()
-        view.backgroundColor = hexStringToUIColor(getRandomColor[0])
-        
-        let nameOfColor = getRandomColor[1]
-        print("\n>>>>>>pressed: name \( nameOfColor )")
-        
         // discusted by this terrible hack, will definitely refactor later
         // 1. randomize everything
         randomizeEveryButtonLabel()
+        let getRandomColorAsRightAnswer = getRandomColorFunc()
+        view.backgroundColor = hexStringToUIColor(getRandomColorAsRightAnswer[0])
         
+        let nameOfCorrectLabel = getRandomColorAsRightAnswer[1]
+        print("\n>>>>>>pressed: name \( nameOfCorrectLabel )")
+    
         // 2. making sure the label corresponds to the right color
         if buttonControllers[0] {
-            firstButton.setTitle(nameOfColor, for: .normal)
+            firstButton.setTitle(nameOfCorrectLabel, for: .normal)
         } else if buttonControllers[1] {
-            secondButton.setTitle(nameOfColor, for: .normal)
+            secondButton.setTitle(nameOfCorrectLabel, for: .normal)
         } else if buttonControllers[2] {
-            thirdButton.setTitle(nameOfColor, for: .normal)
+            thirdButton.setTitle(nameOfCorrectLabel, for: .normal)
         } else if buttonControllers[3] {
-            fourthButton.setTitle(nameOfColor, for: .normal)
+            fourthButton.setTitle(nameOfCorrectLabel, for: .normal)
         }
         
         buttonControllers = [false, false, false, false]
         // at a random index set boolean to true > will be the right answer at next scene
-        // 4: represents the number of buttons
+        // "4" represents the number of buttons
         buttonControllers[ Int(arc4random_uniform( UInt32(4))) ] = true
     }
     
@@ -103,11 +102,11 @@ class ViewController: UIViewController {
     private func hexStringToUIColor (_ hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
-        if (cString.hasPrefix("#")) {
+        if cString.hasPrefix("#") {
             cString.remove(at: cString.startIndex)
         }
         
-        if ((cString.characters.count) != 6) {
+        if (cString.characters.count) != 6 {
             return UIColor.gray
         }
         
@@ -122,22 +121,3 @@ class ViewController: UIViewController {
         )
     }
 }
-
-
-/** Series of junk code that didn't work:
- let jsonPath = Bundle.main.path(forResource: "colors", ofType: "json")
- do {
- let json = try JSONSerialization.data(withJSONObject: jsonPath)
- } catch {
- print(">>>>>>> Oops: ")
- }
- 
- // print("json >>>>>>> \(json)")
- 
- // let jsonData = NSData(contentsOfFile: jsonPath!)
- // let colors = NSJSONSerialization.JSONObjectWithData(jsonData)
- credits to stackoverflow.com/questions/1560081/how-can-i-create-a-uicolor-from-a-hex-string
- 
- Interesting answer: Ibrahima: c'est le combat de la vie
-**/
-
