@@ -3,7 +3,7 @@
 Like the way it sounds: a color guesser app.
 
 ## Demo
-[]()
+![](http://g.recordit.co/YUiHuQ0j0A.gif)
 
 ## ToDos
 
