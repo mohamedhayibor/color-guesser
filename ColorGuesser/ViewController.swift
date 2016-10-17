@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         return colors[ Int(arc4random_uniform( UInt32(colorsLength))) ]
     }
     
-    func randomizeEverything () {
+    func randomizeEveryButtonLabel () {
         firstButton.setTitle(getRandomColorFunc()[1], for: UIControlState.normal)
         secondButton.setTitle(getRandomColorFunc()[1], for: UIControlState.normal)
         thirdButton.setTitle(getRandomColorFunc()[1], for: UIControlState.normal)
@@ -69,10 +69,9 @@ class ViewController: UIViewController {
         let nameOfColor = getRandomColor[1]
         print("\n>>>>>>pressed: name \( nameOfColor )")
         
-        // discuted by this terrible hack, will definitely refactor later
-        
+        // discusted by this terrible hack, will definitely refactor later
         // 1. randomize everything
-        randomizeEverything()
+        randomizeEveryButtonLabel()
         
         // 2. making sure the label corresponds to the right color
         if buttonControllers[0] {
@@ -81,7 +80,7 @@ class ViewController: UIViewController {
             secondButton.setTitle(nameOfColor, for: .normal)
         } else if buttonControllers[2] {
             thirdButton.setTitle(nameOfColor, for: .normal)
-        } else {
+        } else if buttonControllers[3] {
             fourthButton.setTitle(nameOfColor, for: .normal)
         }
         
@@ -99,7 +98,7 @@ class ViewController: UIViewController {
         print("Lifecycle hook not needed yet")
     }
     
-    func hexStringToUIColor (_ hex:String) -> UIColor {
+    private func hexStringToUIColor (_ hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {

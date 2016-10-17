@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,55 +18,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9q6-pn-2oi">
-                                <state key="normal" title="Change color"/>
-                                <connections>
-                                    <action selector="fourthActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F3Q-zC-ZIE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-BE-XeA">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="SEM-xx-hiu"/>
-                                </constraints>
-                                <state key="normal" title="First Button"/>
-                                <connections>
-                                    <action selector="firstButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Gk-Vx-esE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qt2-fz-hwJ">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="DIF-ui-pXL"/>
-                                </constraints>
-                                <state key="normal" title="Second Button"/>
-                                <connections>
-                                    <action selector="secondButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9U-OQ-TVO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFT-gb-OUd">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="0Jd-WD-TSz"/>
-                                </constraints>
-                                <state key="normal" title="Third Button"/>
-                                <connections>
-                                    <action selector="thirdButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b2N-eU-hFA"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" tag="10" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JFN-wt-keH">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-BE-XeA">
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" adjustable="YES"/>
+                                        </accessibility>
+                                        <state key="normal" title="Black"/>
+                                        <connections>
+                                            <action selector="firstButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Gk-Vx-esE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qt2-fz-hwJ">
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" adjustable="YES"/>
+                                        </accessibility>
+                                        <state key="normal" title="Orange"/>
+                                        <connections>
+                                            <action selector="secondButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9U-OQ-TVO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFT-gb-OUd">
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" adjustable="YES"/>
+                                        </accessibility>
+                                        <state key="normal" title="White"/>
+                                        <connections>
+                                            <action selector="thirdButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b2N-eU-hFA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9q6-pn-2oi">
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" adjustable="YES"/>
+                                        </accessibility>
+                                        <state key="normal" title="Violet"/>
+                                        <connections>
+                                            <action selector="fourthActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F3Q-zC-ZIE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <rect key="contentStretch" x="0.75" y="0.0" width="1" height="1"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="kFT-gb-OUd" firstAttribute="leading" secondItem="9q6-pn-2oi" secondAttribute="leading" id="5nN-Aw-Wnz"/>
-                            <constraint firstItem="kFT-gb-OUd" firstAttribute="trailing" secondItem="9q6-pn-2oi" secondAttribute="trailing" id="9Tx-gR-xk3"/>
-                            <constraint firstItem="gpe-BE-XeA" firstAttribute="trailing" secondItem="qt2-fz-hwJ" secondAttribute="trailing" id="9Vj-4M-VMD"/>
-                            <constraint firstItem="gpe-BE-XeA" firstAttribute="leading" secondItem="qt2-fz-hwJ" secondAttribute="leading" id="9e5-Ux-y5D"/>
-                            <constraint firstItem="qt2-fz-hwJ" firstAttribute="trailing" secondItem="kFT-gb-OUd" secondAttribute="trailing" id="Csr-wS-JlP"/>
-                            <constraint firstItem="9q6-pn-2oi" firstAttribute="top" secondItem="kFT-gb-OUd" secondAttribute="bottom" constant="27" id="Jnh-Jr-DZo"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9q6-pn-2oi" secondAttribute="bottom" constant="191" id="LBz-6D-udD"/>
-                            <constraint firstItem="qt2-fz-hwJ" firstAttribute="top" secondItem="gpe-BE-XeA" secondAttribute="bottom" constant="21" id="PqK-fO-8zv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gpe-BE-XeA" secondAttribute="trailing" constant="80" id="Ubs-Ph-04t"/>
-                            <constraint firstItem="kFT-gb-OUd" firstAttribute="top" secondItem="qt2-fz-hwJ" secondAttribute="bottom" constant="18" id="UiK-tz-Xek"/>
-                            <constraint firstItem="qt2-fz-hwJ" firstAttribute="leading" secondItem="kFT-gb-OUd" secondAttribute="leading" id="YhG-AX-U7n"/>
-                            <constraint firstItem="gpe-BE-XeA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="ac7-7b-IiY"/>
-                            <constraint firstItem="gpe-BE-XeA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="170" id="l1y-Us-KRj"/>
+                            <constraint firstItem="JFN-wt-keH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OK8-J1-7pE"/>
+                            <constraint firstItem="JFN-wt-keH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tDU-sR-vfv"/>
                         </constraints>
                     </view>
                     <connections>
